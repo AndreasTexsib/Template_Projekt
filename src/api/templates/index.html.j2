@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+
+{% block title %} {{ title if title else "Project Name" }} {% endblock %}
+
+{% block head %}
+<!-- Extend base template's head. -->
+{{ super() }}
+
+<!-- Own files. -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}" />
+
+{% endblock %}
+
+<!-- Main Content for this View -->
+{% block content %}
+
+{% endblock %}
+<!-- Scripts needed for that view -->
+{% block javascript %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+{% endblock %}

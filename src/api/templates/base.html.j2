@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}" />
+
+    <link rel="shortcut icon" href="/static/images/favicon.png" type="image/png">
+
+    <!-- JQuery -->
+    <script type="text/javascript"
+        src="{{ url_for('static', filename='libraries/JQuery/jquery-3.5.1.min.js') }}"></script>
+
+    <title>{% block title %}{% endblock %}</title>
+
+    {% endblock %}
+
+</head>
+
+<body>
+    <div id="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+{% block javascript %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/database.js') }}"></script>
+{% endblock %}
+
+</html>
